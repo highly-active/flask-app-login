@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Registreer{% endblock %}
+
+{% block content %}
+<div style="display: flex; justify-content:center;align-items:center;height:100vh;">
+    <div class="card login-container" style="width: 400px;">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                <a class="nav-link active" href="#" aria-disabled="true">Registreer</a>
+                </li>
+                <!--        <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    -->
+            </ul>          
+        </div>
+
+        <div class="card-body">
+            <h3 class="text-center mb-4">HHS</h3>
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Gebruikersnaam</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Gebruikersnaam" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mailadres</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mailadres" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Wachtwoord</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Wachtwoord" required>
+                </div>
+                <button type="submit" class="btn btn-primary login-btn" style="width:100%;">Registreer</button>
+                <div class="text-center mt-3">
+                    <a href="{{ url_for('login') }}">Login here</a>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
